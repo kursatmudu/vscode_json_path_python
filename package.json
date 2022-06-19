@@ -1,0 +1,56 @@
+{
+    "name": "vscode-statusbar-json-path",
+    "version": "1.4.5",
+    "license": "MIT",
+    "scripts": {
+        "compile": "tsc -watch -p ./",
+        "test": "node ./node_modules/vscode/bin/test",
+        "vscode:prepublish": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "dependencies": {
+        "hotkeys-js": "^3.8.7"
+    },
+    "devDependencies": {
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.41.0",
+        "mocha": "^6.2.2",
+        "typescript": "^3.6.4"
+    },
+    "activationEvents": [
+        "onLanguage:json",
+        "onLanguage:jsonc",
+        "onLanguage:asl",
+        "onLanguage:ssm-json"
+    ],
+    "author": "Rich Somerfield",
+    "bugs": {
+        "url": "https://github.com/richie5um/vscode-statusbar-json-path/issues"
+    },
+    "categories": [
+        "Other"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.statusBarJSONPath",
+                "title": "Copy current JSONPath to clipboard"
+            }
+        ]
+    },
+    "description": "Shows the path to the selected JSON Property in the StatusBar",
+    "displayName": "JSONPath StatusBar",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "homepage": "https://github.com/richie5um/vscode-statusbar-json-path",
+    "icon": "resources/icon.png",
+    "main": "./out/extension",
+    "publisher": "richie5um2",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/richie5um/vscode-statusbar-json-path"
+    },
+    "typings": "/node_modules/vscode/vscode.d.ts"
+}
